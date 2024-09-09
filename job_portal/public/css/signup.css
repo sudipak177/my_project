@@ -1,0 +1,129 @@
+/* signup.css */
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #007bff, #6a11cb);
+  margin-top: 250px;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.infield {
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+
+.infield input,
+.infield select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.infield input:focus,
+.infield input:valid,
+.infield select:focus,
+.infield select:valid {
+  border-color: #007bff;
+}
+
+.infield .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+}
+
+button.btnSign {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.btnSign:hover {
+  background: #6a11cb;
+}
+
+.reference {
+  margin-top: 20px;
+}
+
+.reference span {
+  color: #333;
+  font-size: 14px;
+}
+
+.reference a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.reference a:hover {
+  color: #6a11cb;
+}
+
+.form-container.sign-up-container {
+  text-align: left;
+}
+
+.form-container.sign-up-container p,
+.form-container.sign-up-container ul {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-container.sign-up-container ul li {
+  margin-bottom: 10px;
+}
+
+/* Error Message Styles */
+div strong {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-container {
+      width: 90%;
+  }
+}

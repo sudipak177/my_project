@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="/static/css/signup.css">
+</head>
+
+<body>
+
+        <div class="form-container sign-in-container">
+            <form action="/signup" method="POST" enctype="multipart/form-data">
+                <h1>Create Your Account</h1>
+                <div class="infield">
+                    <input type="text" name="fullname" placeholder="Full Name" />
+                    <label></label>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.fullname.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+                <div class="infield">
+                    <input type="email" name="email" placeholder="Email"/>
+                    <label></label>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.email.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+                <div class="infield">
+                    <input type="number" name="phone" placeholder="Phone Number" />
+                    <label></label>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.phone.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+                <div class="infield">
+                    <input type="text" placeholder="Address" name="city" />
+                    <label></label>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.city.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+
+                <div class="infield">
+                    <input type="password" name="password" id="passwordField" placeholder="Password" />
+                    <label></label>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.password.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+                <div class="infield">
+                    <select name="gender" id="gender"> Gender
+                        <option hidden>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                {{#if error}}
+                {{#each error}}
+                <div>
+                    <strong>
+                        {{this.gender.msg}}
+                    </strong>
+                </div>
+                {{/each}}
+                {{/if}}
+
+                 <div class="infield">
+                    <label></label>
+                    <input type="file" name="image"/>
+                </div>
+<br>
+                <button class="btnSign">Sign Up</button>
+                <div class="reference">
+                    <span>Already have an account <a href="/login">Login Now</a></span>
+                </div>
+
+            </form>
+        </div>
+       <div class="form-container sign-up-container">
+    <p>To register your company, please contact our admin at <a target="_blank" href="mailto:sudiprc177@gmail.com">sudiprc177@gmail.com</a> with the following details:</p>
+    <ul>
+        <li>Company Name</li>
+        <li>Email</li>
+        <li>Contact Person & Number</li>
+        <li>Company Registration Number</li>
+        <li>Description</li>
+        <li>Address</li>
+    </ul>
+    <p>Our admin will provide you with login credentials upon verification.</p>
+</div>
+<a href="/" class="btn btn-secondary mb-5" style="margin-left: 180px;">Go Back</a>
+    <script src="/static/scripts/signup.js"></script>
+
+</body>
+
+</html>
+                            

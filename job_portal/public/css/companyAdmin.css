@@ -1,0 +1,194 @@
+/* companyAdmin.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header and Company Card Styles */
+.h1AndBars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  position: relative;
+}
+
+.h1AndBars h1 {
+  margin: 0;
+}
+
+.companyCard {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.companyCard h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.companyCard p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.logoutBtn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logoutBtn i {
+  margin-left: 10px;
+}
+
+.alert {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Form Container Styles */
+.companyFormContainer {
+  display: none;
+  position: fixed;
+  /* z-index: 2; */
+  left: 50%;
+  top: 400px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.jobContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.jobContainer .mb-3 {
+  margin-bottom: 15px;
+}
+
+.jobContainer .mb-3 label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.jobContainer .form-control {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.jobContainer .form-select {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.jobContainer .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.icon-close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.icon-close i {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .h1AndBars h1 {
+      font-size: 18px;
+  }
+
+  .sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+
+  .sidenav a {
+      float: left;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+  }
+
+  .logoutBtn {
+      width: 100%;
+  }
+
+  .companyCard,
+  .companyFormContainer {
+      width: 90%;
+  }
+}

@@ -1,0 +1,120 @@
+<style>
+  /* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Section title styling */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto 20px;
+    border: 1px solid #ddd;
+}
+
+/* Job container styling */
+.job-container {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Job index styling */
+.job-container h4 {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+}
+
+/* Image container styling */
+.imageContainer {
+    flex-shrink: 0;
+}
+
+.imageContainer img {
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+/* Job information list styling */
+.job-info-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.job-info-list li {
+    margin-bottom: 10px;
+}
+
+.job-info-list li::before {
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Button styling (if needed) */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+</style>
+
+<h2> Jobs Information</h2> <hr>
+
+{{#if jobsinfo}}
+  {{#each jobsinfo}}
+    <div class="job-container">
+  <h4>{{inc @index}}</h4>
+      <div class="imageContainer">
+        <img src="/static/images/{{this.image}}">
+      </div>
+      <ul class="job-info-list" >
+        
+        <li>Job Title: {{this.job_name}}</li>
+        <li>salary: {{this.salary}}</li>
+        <li>Description: {{this.description}}</li>
+        <li>Job Type: {{this.job_type}}</li>
+        <li>posted Company: {{this.company_name}}</li>
+      </ul>
+      
+    </div>
+                <a href="/backend/superAdmin" style="margin-left:1210px" class="btn btn-primary mt-2"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+
+    
+  {{/each}}
+{{/if}}
