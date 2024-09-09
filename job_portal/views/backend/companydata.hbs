@@ -1,0 +1,135 @@
+<style>
+    /* Reset some default styles */
+body, h1, table, th, td, caption {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #007BFF;
+}
+
+/* Table container styling */
+.tableContainer, .companyTableContainer {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table caption styling */
+caption {
+    caption-side: top;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* Table header styling */
+thead th {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table body styling */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody th, tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table action button styling */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+</style>
+
+
+
+
+    <div class="companyTableContainer" id="companiesLists">
+        <table>
+          
+
+            <caption style="text-align: center;">Company Information</caption>
+            <thead>
+                <tr>
+                    <th>S.N</th>
+                    <th>Company Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                    <th>Pan Number</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    {{!-- <th>Action</th> --}}
+                </tr>
+            <tbody>
+                {{#each companyList}}
+                <tr>
+                    <th scope="row">{{inc @index}}</th>
+                    <td>{{this.company_name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.pan_number}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.location}}</td>
+
+                    {{!-- <td><a href="/backend/delete/{{this.id}}" class="btn btn-primary">Delete</a></td> --}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+                <a href="/backend/superAdmin" style="margin-left:1110px" class="btn btn-primary mt-5"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+
+    </div>
