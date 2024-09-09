@@ -1,0 +1,100 @@
+/* Reset some default styles */
+body, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Side navigation bar styling */
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidenav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: #003f7f;
+}
+
+/* Header title and horizontal rule */
+h2 {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto 20px;
+  border: 1px solid #ddd;
+}
+
+/* Dashboard styling */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+/* Counter styling */
+.counterr {
+  font-size: 40px;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Dashboard item styling */
+.dashboard-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+.dashboard-item p {
+  font-size: 16px;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-in-out;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

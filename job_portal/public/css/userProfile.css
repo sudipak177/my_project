@@ -1,0 +1,167 @@
+/* userProfile.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f9; */
+    /* background-color: #dc3545; */
+    background-color:#007;
+    color: white;
+    /* color: #dc3545; */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    margin-top: 100px;
+}
+
+/* Alert Styles */
+.alert {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+}
+
+/* User Profile Styles */
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.userCard {
+    background: #348cb2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imageSection img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.userDetails {
+    margin-bottom: 20px;
+}
+
+.userDetails h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.userDetails p {
+    margin: 5px 0;
+}
+
+.updateDetails {
+    margin-bottom: 20px;
+}
+
+.updateDetails .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updateDetails .btn-secondary {
+    background-color: #6c757d;
+}
+
+.updateDetails .btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Resume Container Styles */
+.resumeContainer {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.resumeContainer label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resumeContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+form {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+form .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Logout Button Styles */
+.logout {
+    margin-top: 20px;
+}
+
+.logoutBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .userCard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .userDetails,
+    .updateDetails,
+    form {
+        width: 100%;
+    }
+}
